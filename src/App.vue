@@ -5,12 +5,25 @@
       menu (dans <code class="font-mono">/src/App.vue</code>)
     </h4>
     <ul>
+
       <li>
-        <router-link class="text-red-600 underline" to="/">
-          lien vers
-          <code class="font-mono">/src/pages/index.vue</code>
+        <router-link class="text-indigo-400 underline" to="/simple">
+          Simple
         </router-link>
       </li>
+      <li>
+        <router-link class="text-indigo-400 underline" to="/liste">
+          Liste
+        </router-link>
+      </li>
+      <li>
+        <router-link class="text-indigo-400 underline" to="/liste-fetch">
+          Liste-fetch
+        </router-link>
+      </li>
+
+
+
     </ul>
   </nav>
 
