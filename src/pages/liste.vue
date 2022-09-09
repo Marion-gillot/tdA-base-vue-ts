@@ -2,14 +2,22 @@
 import Card from "../components/card.vue";
 
 const maisons = [{
-
-  nbrSDB:     { type:Number,     default:'Gillot'},
-  nom:        { type:String,     default:'Marion'},
-  prix:       { type:Number,     default:new Date()},
-  favori:     { type:Boolean,     default:7},
-  image:      { type:String,     default:() => {} },
-}]
+  nbrSDB: '4',
+  nom: 'Maison',
+  prix:'45€',
+  favori: '7',
+},
+{
+    nbrSDB: '4',
+    nom: 'Maison',
+    prix: '45€',
+    favori: '7',
+}];
     
+<Card v-for="maison in maisons" :key="" v-bind="maison"/>
+
+
+
 
 
     
