@@ -21,9 +21,6 @@
           Liste-fetch
         </router-link>
       </li>
-
-
-
     </ul>
   </nav>
 
