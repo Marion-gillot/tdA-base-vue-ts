@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Card from "@/components/card.vue";
+import Card from '@/components/card.vue';
 const objet = {nom:"test", price:34, favoris:true, txt:"produit de test",  nbbath:2, nbsize:"test m²", img:"/public/card.jpg"}
 </script>
 

@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import FicheOrffreMaison from "@/components/FicheOffreMaison.vue";
-import FicheOffreMaison from "../components/FicheOffreMaison.vue";
-const res = await fetch ("/maisons-public.json");
+import Card from '@/components/card.vue';
+const res = await fetch ("/maisons.json");
 const maisons = await res.json();
 </script>
 
