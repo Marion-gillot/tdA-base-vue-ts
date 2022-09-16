@@ -21,10 +21,23 @@ v-bind="maison" />
 
 //On passe la "ref" à FormKit
 
-<FormKit type="form" v-model="maison">
+<FormKit type="form" v-model="maison" 
+    :submit-attrs="{ classes: { input: 'bg-red-300 p-1 rounded' } }"
+    :config="{  classes: {
+                input: 'p-1 rounded border-gray-300 shadow-sm border',
+                label: 'text-gray-600',
+        },
+        }">
+
 <FormKit name="nom" label="nom"/>
 <FormKit name="prix" label="prix" type="number"/>
 <FormKit name="favori" label="mettre en valeur" type=" checkbox" />
+<FormKit
+ name="favori"
+ label="mettre en valeur"
+ type="checkbox"
+ wrapper-class="flex"
+  />
 </FormKit>
 </div>
 </div>
