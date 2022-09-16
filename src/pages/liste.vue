@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import cardVue from "../../components/card.vue";
+import cardVue from "../components/card.vue";
 
 const maisons = [{
   nbrSDB: '4',

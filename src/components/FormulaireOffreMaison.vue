@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "@vue/reactivity";
-import FicheOffreMaison from "../components/FormulaireOffreMaison.vue";
+import FicheOffreMaison from "./FicheOffreMaison.vue";
 // On fait une variable réactive qui réference les données
 // ATTENTION : faire une Ref pas une Reactive car :
 // c'est l'objet qui doit être réactif, pas ses props
