@@ -1,14 +1,16 @@
 [{
     "nbrSDB": 4,
-    "nom": "Maison",
+    "nom": "Maison 1",
     "prix":45,
-    "favori": 7
+    "favori": 7,
+    "image": "../../public/maison1.jpg"
     },
     {
     "nbrSDB": 4,
-    "nom": "Maison",
+    "nom": "Maison 2",
     "prix": 45,
-    "favori": 7
+    "favori": 7,
+    "image": "../../public/maison2.jpg"
 }]
 
       
