@@ -1,20 +1,25 @@
 <template>
   <nav class="justify-center pt-8 pb-8">
-    <ul class="flex space-x-9">
+    <ul class="flex space-x-9 justify-center">
 
       <li>
-        <router-link class="text-indigo-400 underline" to="/simple">
+        <router-link class="text-black" to="/simple">
           Simple
         </router-link>
       </li>
       <li>
-        <router-link class="text-indigo-400 underline" to="/liste">
+        <router-link class="text-black" to="/liste">
           Liste
         </router-link>
       </li>
       <li>
-        <router-link class="text-indigo-400 underline" to="/liste-fetch">
+        <router-link class="text-black" to="/liste-fetch">
           Liste-fetch
+        </router-link>
+      </li>
+      <li>
+        <router-link class="text-black" to="/liste-supabase">
+          Liste-supabase
         </router-link>
       </li>
     </ul>

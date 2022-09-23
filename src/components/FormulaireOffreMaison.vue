@@ -2,11 +2,12 @@
 import { ref } from "@vue/reactivity";
 import card from "@/components/card.vue";
 import listeSupabaseVue from "@/pages/liste-supabase.vue";
+import { supabase } from "@/supabase";
 // On fait une variable réactive qui réference les données
 // ATTENTION : faire une Ref pas une Reactive car :
 // c'est l'objet qui doit être réactif, pas ses props
 const maison = ref({});
-const props = defineProps (["id"]);
+/* const props = defineProps (["id"]);
 if (props.id) {
         //Chargement des données de la maison 
         let { data, error } = await listeSupabase
@@ -15,16 +16,16 @@ if (props.id) {
         .eq("id", props.id);
     if ( error ) console.log("n'a pas pu charger la table Maison:", error);
     else maison.value = ( data as any[]) [0];
-}
+} */
 
 async function upsertMaison(dataForm, node) {
         const { data, error } = await supabase.from("Maison").upsert(dataForm);
         if (error) node.setErrors([error.message]);
-        else {
+       /*  else {
                 node.setErrors([]);
                 router.push ({ name: "nom", params: { id: dataForm,
                 id } });
-        }
+        } */
 }
 </script>
 
@@ -41,17 +42,18 @@ async function upsertMaison(dataForm, node) {
 
 <!-- On passe la "ref" à FormKit -->
 
- <FormKit type="form" v-model="maison"
+ <FormKit @submit="upsertMaison"
+  type="form" v-model="maison"
             :config="{
                         classes: {
-                                    input: 'p-1 rounded border-gray-300 shadow-sm border bg-red-300 hover:bg-green-500 hover:border-4 hover:animate-pulse',
+                                    input: 'p-1 rounded border-gray-300 shadow-sm border bg-bg-text-gray-600 hover:bg-border-gray-300 hover:border-4 hover:animate-pulse',
                                     label: 'text-gray-600',
                                 },
                     }"
-            :submit-attrs="{ classes: { input: 'bg-green-300 px-6 py-2 rounded-full text-center' } }">
-                <FormKit name="nom" label="nom"/>
-                <FormKit name="txt" label="Desicription"/>
-                <FormKit name="price" label="prix" type="number"/>
+            :submit-attrs="{ classes: { input: 'bg-text-gray-600 px-6 py-2 rounded-full text-center' } }">
+                <FormKit name="nom" label="Nom"/>
+                <FormKit name="txt" label="Description"/>
+                <FormKit name="price" label="Prix" type="number"/>
                 <div class="flex gap-5">
                     <FormKit name="nbsize" label="Superficie"/>
                     <FormKit name="nblit" label="Nombre de lit" type="number"/>
