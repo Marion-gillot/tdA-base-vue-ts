@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
     import Card from "../../components/card.vue";
     import FormulaireOffreMaison from "../../components/FormulaireOffreMaison.vue"
 
