@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import bath from "./icones/bath.vue";
 import heart from "./icones/heart.vue";
+import Bed from "./icones/bed.vue";
+import Size from "./icones/size.vue";
 
 defineProps( {
     nom: String,
@@ -8,6 +10,8 @@ defineProps( {
     favori: Boolean,
     image: String, // les images sont simplement l'URL absolue (depuis la racine, débute par '/' )
     nbrSDB: Number,
+    nbrSize: Number,
+    nbrBeds: Number,
   });
 </script>
 
@@ -16,7 +20,7 @@ defineProps( {
     <!-- Pour changer la valeur d'un attribut on utilise un "binding" :
     https://vuejs.org/guide/essentials/template-syntax.html#attribute-bindings 
     Ici on affecte à l'attribut 'src' la 'props' "image" -->
-    <img class="w-full h-48 object-cover" :src="image" alt="" />
+    <img class="w-full h-48 object-cover" src="public/maison1.jpg" alt="maison" />
     <figcaption
       class="relative flex flex-col border-2 border-t-0 border-indigo-100"
     >
@@ -31,7 +35,11 @@ defineProps( {
 
       <hr class="border-indigo-100 border-t-2 my-4" />
 
-      <div><bath class="inline-block pr-1" />{{ nbrSDB }} Bathrooms</div>
+      <div class="mx-10 grid grid-cols-3">
+          <div><bath class="inline-block pr-1" />{{ nbrSDB }} Bathrooms</div>
+          <div><bed class="inline-block pr-1" />{{ nbrSDB }} Beds</div>
+          <div><size class="inline-block pr-1" />{{ nbrSDB }} Superficie</div>
+     </div>
     </figcaption>
   </figure>
 </template>

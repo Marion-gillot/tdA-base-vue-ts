@@ -1,8 +1,8 @@
 <script setup lang="ts">
-    import Card from "../../components/card.vue";
+    import card from "../../components/card.vue";
     import FormulaireOffreMaison from "../../components/FormulaireOffreMaison.vue"
 
-    const maisonex = {nom:"test", price:34, favoris:false, txt:"produit de test", nbbath:2, nbsize:"test m²", img:"/card.jpg"};
+    const maisonex = {nom:"test", price:2010, favoris:false, txt:"texte", nbbath:6, nbsize:"test m²", img:"../../../public/maison1.jpg"};
 </script>
 
 <template>
