@@ -3,6 +3,7 @@
     defineProps (["id"]);
 </script>
 
+
 <template>
     <div class="p-2">
         <FormulaireOffreMaison :id="id" />
