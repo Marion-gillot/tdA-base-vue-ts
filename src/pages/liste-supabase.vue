@@ -1,14 +1,17 @@
 <script setup lang="ts">
 import { supabase } from "../supabase";
+import Card from "../components/Card.vue";
 console.log("supabase :", supabase); // pour vérifier et "garder" supabase dans le code
-const maisons = []; // à remplacer par l'appel à Supabase
+let { data: tableauMaisons, error } = await supabase
+  .from('maison')
+  .select('*')
+ // à remplacer par l'appel à Supabase
 </script>
 
 <template>
 <div class="p-2">
     <h1 class="text-2xl">Page Liste Supabase</h1>
-    <FicheOffreMaison v-for="maison in maisons" :key="maison.nom" v-bind="maison" />
-    <card class="w-1/2" v-bind="maisons"/>
+    <Card v-for="uneMaison in tableauMaisons" :key="uneMaison.nom" v-bind="uneMaison" />
 </div>
 </template>
 

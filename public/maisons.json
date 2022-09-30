@@ -1,0 +1,31 @@
+[{
+    "nbrSDB": 4,
+    "nom": "Beverly Springfield",
+    "prix": 1400,
+    "favori": 7,
+    "image": "@/public/maison1.jpg",
+    "nbrBeds": 4,
+    "nbrSize": 135
+    },
+    {
+    "nbrSDB": 4,
+    "nom": "Palm Harbor",
+    "prix": 2080,
+    "favori": 26,
+    "image": "../../public/maison2.jpg",
+    "nbrBeds": 7,
+    "nbrSize": 135
+    },
+    {
+    "nbrSDB": 4,
+    "nom": "Faulkner Ave",
+    "prix": 4580,
+    "favori": 12,
+    "image": "../../public/maison3.jpg",
+    "nbrBeds": 7,
+    "nbrSize": 135
+    }
+
+]
+
+      

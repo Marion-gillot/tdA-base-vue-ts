@@ -1,16 +1,13 @@
 <script setup lang="ts">
-import card from '@/components/card.vue';
-const res = await fetch ("maisons.json");
+import Card from '@/components/card.vue';
+const res = await fetch ("/maisons.json");
 const maisons = await res.json();
 </script>
 
 <template>
-<div class="p-2">
-    <h1 class="text-2xl">Page Liste</h1>
-    <div v-for="maison in maisons" :key="maison.nom">
-    <card class="w-1/2" v-bind="maisons"/>
-</div>
-</div>
-</template>
-
+    <div class="p-2">
+      <h1 class="text-2xl pb-9">Page Liste-Fetch</h1>
+        <Card v-for="maison in maisons" :key="maison.nom" v-bind="maison" />
+    </div>
+  </template>
 
