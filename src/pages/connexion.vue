@@ -4,7 +4,7 @@
      
      
  <template>
-    <div class="p-2">
+    <div class="p-9">
         <h1 class="text-2xl pb-9"> Page se connecter</h1>
         <Authentification/>
      </div>

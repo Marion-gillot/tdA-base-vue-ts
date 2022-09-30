@@ -6,7 +6,7 @@ import maisons from "../assets/maisons.json";
     
 
 <template>
-  <div class="p-2">
+  <div class="p-9">
     <h1 class="text-2xl pb-9">Page Liste</h1>
       <Card v-for="maison in maisons" :key="maison.nom" v-bind="maison" />
   </div>

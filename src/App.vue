@@ -27,6 +27,11 @@
           Se connecter
         </router-link>
       </li>
+      <li>
+        <router-link class="text-black" to="/edit/new">
+          Nouvelle offre
+        </router-link>
+      </li>
     </ul>
   </nav>
 

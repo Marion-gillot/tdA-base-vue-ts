@@ -9,7 +9,7 @@ let { data: tableauMaisons, error } = await supabase
 </script>
 
 <template>
-<div class="p-2">
+<div class="p-9">
     <h1 class="text-2xl">Page Liste Supabase</h1>
     <Card v-for="uneMaison in tableauMaisons" :key="uneMaison.nom" v-bind="uneMaison" />
 </div>
