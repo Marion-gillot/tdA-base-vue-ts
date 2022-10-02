@@ -7,7 +7,7 @@ import { supabase } from "@/supabase";
 // ATTENTION : faire une Ref pas une Reactive car :
 // c'est l'objet qui doit être réactif, pas ses props
 const maison = ref({nom:"test", price:29, favoris:false, txt:"test", nbbath:4, nblit:3, nbsize:"45 m²", img:"../../public/maison1.jpg"});
-/* const props = defineProps (["id"]);
+const props = defineProps (["id"]);
 if (props.id) {
         //Chargement des données de la maison 
         let { data, error } = await listeSupabase
@@ -17,8 +17,7 @@ if (props.id) {
     if ( error ) 
     console.log("n'a pas pu charger la table Maison:", error);
     else maison.value = data [0];
-} */
-
+} 
 async function upsertMaison(dataForm, node) {
         const { data, error } = await supabase.from("Maison").upsert(dataForm);
         if (error) node.setErrors([error.message]);

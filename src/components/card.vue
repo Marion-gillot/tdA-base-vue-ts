@@ -63,19 +63,8 @@ defineProps ({
         <div><size class="inline-block align-top" /> {{ nbsize }}</div>
       </div>
       <div
-        class="
-          absolute
-          top-7
-          right-4
-          grid
-          h-12
-          w-12
-          place-items-center
-          rounded-full
-          border-2 border-indigo-100
-        "
-      >
-        <heart :class="{ 'fill-red-400': favoris }" />
+        class=" absolute top-7 right-4 grid h-12 w-12 place-items-center rounded-full border-2 border-indigo-100">
+        <heart :class="{ 'fill-indigo-500': favoris }" />
       </div>
     </figcaption>
   </figure>

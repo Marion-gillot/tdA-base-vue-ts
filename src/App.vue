@@ -1,5 +1,5 @@
 <template>
-  <nav class="justify-center pt-8 pb-8">
+  <nav class="justify-center pt-8 pb-8 bg-violet-200 ">
     <ul class="flex space-x-9 justify-center">
 
       <li>

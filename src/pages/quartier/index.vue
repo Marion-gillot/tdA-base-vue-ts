@@ -1,6 +1,6 @@
 <script setup lang="ts">
  const { data, error } = await supabase.from("quartiercommune"),
-select("")
+ select("")
 
 </script>
 
