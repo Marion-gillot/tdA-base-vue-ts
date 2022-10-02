@@ -24,7 +24,7 @@
           Se déconnecter ({{ user.email }})
         </button>
         <FormKit
-          v-else type="form" :submit-label="nvlUtilisateur ? 'S\'inscrire' : 'Se connecter'"@submit="signIn">
+          v-else type="form" :submit-label="nvlUtilisateur ? 'S\'inscrire' : 'Se connecter'" @submit="signIn">
           <FormKit name="email" label="Votre eMail" type="email" />
           <FormKit name="password" label="Mot de passe" type="password" />
           <formKit
